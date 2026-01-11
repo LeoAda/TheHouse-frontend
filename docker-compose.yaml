@@ -1,0 +1,15 @@
+services:
+  thehouse-back:
+    image: thehouse-back:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/usr/src/app/data
+    restart: unless-stopped
+
+  thehouse-front:
+    build: .
+    image: thehouse-front:latest
+    ports:
+      - "3002:3002"
+    restart: unless-stopped
