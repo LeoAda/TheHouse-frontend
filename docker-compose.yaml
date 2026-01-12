@@ -11,5 +11,5 @@ services:
     build: .
     image: thehouse-front:latest
     ports:
-      - "3002:3002"
+      - "3002:80"
     restart: unless-stopped

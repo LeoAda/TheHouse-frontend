@@ -1,4 +1,0 @@
-http://localhost:3002 {
-	root * /srv
-	file_server
-}
