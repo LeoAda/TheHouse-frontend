@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
+import { Item, ItemsApi } from '../items-api/items-api';
 
 @Component({
   selector: 'app-items',
@@ -6,6 +7,14 @@ import { Component } from '@angular/core';
   templateUrl: './items.html',
   styleUrl: './items.scss',
 })
-export class Items {
+export class Items implements OnInit {
+  private itemsApi = inject(ItemsApi);
+  protected items = signal<Item[]>([]);
 
+  ngOnInit() {
+    this.itemsApi.getItems().subscribe((data) => {
+        this.items.set(data);
+      }
+    );
+  }
 }
