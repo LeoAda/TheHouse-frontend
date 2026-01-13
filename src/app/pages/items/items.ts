@@ -1,9 +1,12 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
-import { Item, ItemsApi } from '../items-api/items-api';
+import { Item, ItemsApi } from '../../services/items-api/items-api';
+import { NzListModule } from 'ng-zorro-antd/list';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzSpaceModule } from 'ng-zorro-antd/space';
 
 @Component({
   selector: 'app-items',
-  imports: [],
+  imports: [NzListModule, NzIconModule, NzSpaceModule],
   templateUrl: './items.html',
   styleUrl: './items.scss',
 })
