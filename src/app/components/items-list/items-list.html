@@ -1,0 +1,16 @@
+<ul nz-list [nzDataSource]="items()" nzBordered nzSize="large">
+    <nz-list-header>Items</nz-list-header>
+    @for (item of items(); track item) {
+    <li nz-list-item nzNoFlex>
+        <ul nz-list-item-actions>
+        <nz-list-item-action>
+            <nz-space [nzSize]="'small'">
+            <a [routerLink]="['/items', item.id]"><nz-icon nzType="eye" nzTheme="outline" /></a>
+            <a><nz-icon nzType="edit" nzTheme="outline" /></a>
+            </nz-space>
+        </nz-list-item-action>
+        </ul>
+        {{ item.name }}
+    </li>
+    }
+</ul>

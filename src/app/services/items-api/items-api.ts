@@ -1,20 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
-export interface Item {
-  id: string,
-  name: string,
-  description: string,
-  obtaining: string,
-  usage: string,
-}
-
+import { Item } from '../../model';
+import { environment } from '../../../environments/environment';
 @Injectable({
   providedIn: 'root',
 })
 export class ItemsApi {
   private http = inject(HttpClient);
-  readonly url = 'http://localhost:3000/api/items';
+  readonly url = `${environment.backendUrl}/api/items`;
   
   getItems(): Observable<Item[]> {
     return this.http.get<Item[]>(this.url);
