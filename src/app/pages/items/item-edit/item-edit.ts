@@ -1,16 +1,15 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ItemDisplay } from '../../../components/item-display/item-display';
+import { ItemEdit } from '../../../components/item-edit/item-edit';
 import { ItemsApi } from '../../../services/items-api/items-api';
 import { Item } from '../../../model';
-
 @Component({
-  selector: 'pages-item-detail',
-  imports: [ItemDisplay],
-  templateUrl: './item-detail.html',
-  styleUrl: './item-detail.scss'
+  selector: 'pages-item-edit',
+  imports: [ItemEdit],
+  templateUrl: './item-edit.html',
+  styleUrl: './item-edit.scss',
 })
-export class PagesItemDetail implements OnInit {
+export class PagesItemEdit {
   private route = inject(ActivatedRoute);
   private itemsApi = inject(ItemsApi);
   

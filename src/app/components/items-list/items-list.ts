@@ -6,7 +6,7 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzSpaceModule } from 'ng-zorro-antd/space';
 
 @Component({
-  selector: 'app-items-list',
+  selector: 'items-list',
   imports: [NzListModule, NzIconModule, NzSpaceModule, RouterLink],
   templateUrl: './items-list.html',
   styleUrl: './items-list.scss',

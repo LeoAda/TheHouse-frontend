@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PagesItemDetail } from './item-detail';
+import { ItemEdit } from './item-edit';
 
-describe('PagesItemDetail', () => {
-  let component: PagesItemDetail;
-  let fixture: ComponentFixture<PagesItemDetail>;
+describe('ItemEdit', () => {
+  let component: ItemEdit;
+  let fixture: ComponentFixture<ItemEdit>;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PagesItemDetail]
+      imports: [ItemEdit]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PagesItemDetail);
+    fixture = TestBed.createComponent(ItemEdit);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

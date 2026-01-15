@@ -1,8 +1,10 @@
 import { Routes } from '@angular/router';
 import { Items } from './items';
-import { ItemDetail } from './item-detail/item-detail';
+import { PagesItemDetail } from './item-detail/item-detail';
+import { PagesItemEdit } from './item-edit/item-edit';
 
 export const ITEMS_ROUTES: Routes = [
   { path: '', component: Items },
-  { path: ':id', component: ItemDetail },
+  { path: ':id', component: PagesItemDetail },
+  { path: ':id/edit', component: PagesItemEdit }
 ];

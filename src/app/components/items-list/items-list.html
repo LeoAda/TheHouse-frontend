@@ -6,7 +6,7 @@
         <nz-list-item-action>
             <nz-space [nzSize]="'small'">
             <a [routerLink]="['/items', item.id]"><nz-icon nzType="eye" nzTheme="outline" /></a>
-            <a><nz-icon nzType="edit" nzTheme="outline" /></a>
+            <a [routerLink]="['/items', item.id, 'edit']"><nz-icon nzType="edit" nzTheme="outline" /></a>
             </nz-space>
         </nz-list-item-action>
         </ul>

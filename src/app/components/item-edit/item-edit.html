@@ -1,0 +1,8 @@
+@if (item(); as item) {
+  <nz-descriptions nzTitle="{{item.name}} Info" nzBordered>
+    <nz-descriptions-item nzTitle="Name"><textarea rows="4" nz-input [(ngModel)]="item.name"></textarea></nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Description"><textarea rows="4" nz-input [(ngModel)]="item.description"></textarea></nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Obtaining"><textarea rows="4" nz-input [(ngModel)]="item.obtaining"></textarea></nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Usage"><textarea rows="4" nz-input [(ngModel)]="item.usage"></textarea></nz-descriptions-item>
+  </nz-descriptions>
+}
